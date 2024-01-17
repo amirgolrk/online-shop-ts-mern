@@ -1,20 +1,43 @@
 {
-    "version": 2,
-    "builds": [
-      {
-        "src": "./index.ts",
-        "use": "@vercel/node"
-      }
-    ],
-    "routes": [
-      {
-        "src": "/api/(.*)",
-        "dest": "./routers/$1.ts"
-      },
-      {
-        "src": "/(.*)",
-        "dest": "./$1"
-      }
-    ]
-  }
-  
+  "version": 2,
+  "builds": [
+    {
+      "src": "/src/**/*.ts",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/key",
+      "dest": "/src/routers/keyRouter.ts"
+    },
+    {
+      "src": "/api/order",
+      "dest": "/src/routers/orderRouter.ts"
+    },
+    {
+      "src": "/api/product",
+      "dest": "/src/routers/productRouter.ts"
+    },
+    {
+      "src": "/api/seed",
+      "dest": "/src/routers/seedRouter.ts"
+    },
+    {
+      "src": "/api/user",
+      "dest": "/src/routers/userRouter.ts"
+    },
+    {
+      "src": "/api/(.*)",
+      "dest": "/src/index.ts"
+    },
+    {
+      "src": "/api/(.*)",
+      "dest": "./routers/$1.ts"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "./$1"
+    }
+  ]
+}
