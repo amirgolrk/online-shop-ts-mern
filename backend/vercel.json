@@ -8,24 +8,8 @@
     ],
     "routes": [
       {
-        "src": "/api/key",
-        "dest": "src/routers/keyRouter.ts"
-      },
-      {
-        "src": "/api/order",
-        "dest": "src/routers/orderRouter.ts"
-      },
-      {
-        "src": "/api/product",
-        "dest": "src/routers/productRouter.ts"
-      },
-      {
-        "src": "/api/seed",
-        "dest": "src/routers/seedRouter.ts"
-      },
-      {
-        "src": "/api/user",
-        "dest": "src/routers/userRouter.ts"
+        "src": "/(.*)",
+        "dest": "/"
       }
     ]
   }
